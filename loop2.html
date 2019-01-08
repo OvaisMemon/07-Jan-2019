@@ -1,0 +1,19 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            var arrReq = ["Name", "Id", "Age"];
+            var arrStd = [];
+
+            for(var i = 0; i < arrReq.length; i++){
+                arrStd[i] = prompt("Enter " + arrReq[i]);
+            }
+
+            for(var j = 0; j < arrReq.length; j++){
+                document.write("The Student " + arrReq[j] + " is " + arrStd[j] + "<br />");
+            }
+        </script>
+    </body>
+</html>

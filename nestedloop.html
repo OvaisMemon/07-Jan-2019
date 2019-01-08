@@ -1,0 +1,26 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            var arrReq = ["Name", "Id", "Age"];
+            var arrStd = [];
+
+            var count = prompt("Enter no. of students");
+            
+            for(l = 0; l < count; l++){
+                arrStd[l] = [];
+                for(var i = 0; i < arrReq.length; i++){
+                    arrStd[l][i] = prompt("Enter " + arrReq[i] + " of no. " + (l+1) + " student.");
+                }
+            }
+
+            for(l = 0; l < count; l++){
+                for(var j = 0; j < arrReq.length; j++){
+                    document.write("The Student " + arrReq[j] + " of no. " + (l+1) + " student is " + arrStd[l][j] + "<br />");
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,48 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            var arrReq = ["Name", "Id", "Age", "Timings Count"];
+            var arrStd = [];
+            var arrTime = [];
+            
+            var count = prompt("Enter no. of students");
+            
+            for(l = 0; l < count; l++){
+                arrStd[l] = [];
+                arrTime[l]=[];
+
+                for(var i = 0; i < arrReq.length; i++){
+                    arrStd[l][i] = prompt("Enter " + arrReq[i] + " of no. " + (l+1) + " student.");
+                    
+                    arrTime[l][i] = [];
+                    if(arrReq[i] == "Timings Count"){
+                        console.log(arrStd[l][i]);
+                        for(var k = 0; k <  parseInt(arrStd[l][i]); k++){
+                            arrTime[l][i][k] = prompt("Enter Time " + (k+1) + " of student no. " + (l+1));
+                        }
+                    }
+
+                }
+            }
+
+            for(l = 0; l < count; l++){
+                
+                for(var j = 0; j < arrReq.length; j++){
+
+                    if(arrReq[j] != "Timings Count")
+                    {
+                        document.write("The Student " + arrReq[j] + " of no. " + (l+1) + " student is " + arrStd[l][j] + "<br />");
+                    }
+                    else{
+                        for(var p = 0; p < arrTime[l][j].length; p++){
+                            document.write("The " + (p+1) + " time of student is " + arrTime[l][j][p] + "<br />");
+                        }
+                    }      
+                }
+            }
+        </script>
+    </body>
+</html>
